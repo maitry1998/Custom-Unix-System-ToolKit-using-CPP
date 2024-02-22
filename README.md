@@ -1,4 +1,44 @@
 // Readme file
+About My Unix Systems Toolkit (mytoolkit)
+
+Project Statement:
+The objective of this project was to develop a simple Unix systems toolkit for process and filesystem management. The toolkit's functionality resembles Unix shells like bash and Unix systems forensic toolkits such as Sleuth Kit.
+
+Project Objectives:
+Practice Unix system calls.
+Understand Unix process management, synchronization, and inter-process communication (IPC).
+Implement filesystem management tools.
+
+Functionality Overview:
+Upon initialization, mytoolkit displays a dollar sign ($) and a space, awaiting user input. The toolkit supports various commands, including "myexit", "mycd", and "mypwd". Additionally, it allows execution of external Unix commands, supports pipes, and enables I/O redirection.
+
+Implemented Commands:
+
+Internal Commands:
+myexit: Terminates the toolkit.
+mycd: Changes the current working directory. Syntax: mycd dir.
+mypwd: Prints the absolute path of the current working directory.
+
+External Commands:
+All existing external Unix commands are supported, including:
+mytree.x
+mymtimes.x
+mytimes.x
+mytimeout.x: Runs a command with a time limit. Syntax: mytimeout.x snds cmd [cmd-args].
+
+Notes:
+Handling End of File: The toolkit terminates upon encountering the end of file character (CTRL-D).
+No Zombie Processes: Long-term zombie processes are not created, ensuring proper process handling.
+Makefile: A makefile is provided for easy compilation.
+README: This document explains the implementation choices, limitations, and special requirements of the toolkit commands.
+
+Limitations:
+Special character expansion (e.g., *) is not supported.
+Pipe and I/O redirection cannot appear together in any command line.
+The "system()" library routine is not used.
+
+Conclusion:
+My Unix systems toolkit (mytoolkit) provides a comprehensive environment for process and filesystem management on Unix systems. It adheres to project specifications, handles process management efficiently, and enables seamless execution of both internal and external commands.
 
 description of all files:
 mainterminal.cpp : main source code that has whole code for running terminal.
@@ -14,11 +54,9 @@ mytimeout : object / executable file for running mytimeout program
 
 
 How to run the terminal?
-
 GIST : command:
 1. make
 2. terminal
-
 
 PLEASE NOTE:
 While running the object file aka terminal , if it doesn't work , please try ./terminal , same goes for mytree, mytime, mytimes, and mytimeout. 
