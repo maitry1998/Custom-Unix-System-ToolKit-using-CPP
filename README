@@ -1,0 +1,48 @@
+// Readme file
+
+description of all files:
+mainterminal.cpp : main source code that has whole code for running terminal.
+mytree.cpp : source code for mytree program that mimics tree program.
+mytime.cpp : source code for mytime program that mimics time program.
+mytimes.cpp : source code for mytimes.cpp.
+mytimeout.cpp : source code for mytimeout.cpp that mimics timeout.
+terminal : object/ executable file for running the terminal
+mytree : object / executable file for running mytree program
+mytime : object / executable file for running mytime program
+mytimes : object / executable file for running mytimes program
+mytimeout : object / executable file for running mytimeout program
+
+
+How to run the terminal?
+
+GIST : command:
+1. make
+2. terminal
+
+
+PLEASE NOTE:
+While running the object file aka terminal , if it doesn't work , please try ./terminal , same goes for mytree, mytime, mytimes, and mytimeout. 
+ALso the executable files for three external commands , i.e mytree , mytime and mymtimes is NOT mytree.x, mymtimes.x and mytime.x but it is just mytree, mytime and mymtimes to make it more command like when executing in toolkit terminal. The source code for these three program is same as last time because there were no functional changes. 
+
+
+Explanation:
+compile all the codes. To compile just run 'make' command. The make command will call makefile , which will compile all the source codes which includes mytree.cpp , mytime.cpp , mytimes.cpp , mytimeout.cpp and mainterminal.cpp. The object files will be mytree, mytime , mytimes , mytimeout and terminal. Now , once the code is compiled , to run the terminal , just type 'terminal' as this is the object file name for mainterminal.cpp
+
+how to run individual external command outside terminal?
+1. make
+2. mytree or mytime or mytimes or mytimeout (with appropriate commands)
+
+you can also compile individual files with make and filenname.
+
+
+to clen all the executables , run make clean.
+
+
+// assumption
+I am able to run external programs in my terminal as i have set the path.
+
+//Scope Of this terminal
+this terminal supports all external commands like mv , mkdir , ls , etc.  it supports internal commands cd as mycd , exit as myexit and pwd as mypwd. It also supports io redirection and inter process communication through pipes.
+
+// limitations
+My toolkit only supports two pipes. It does not support more than two pipes.
